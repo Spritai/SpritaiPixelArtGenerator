@@ -109,5 +109,10 @@ namespace SpritaiPixelArtGenerator
         {
             // Optionnel : enregistrement rapide par clic ?
         }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

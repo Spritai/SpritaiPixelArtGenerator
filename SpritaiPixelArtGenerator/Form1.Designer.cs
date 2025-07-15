@@ -35,6 +35,7 @@
             pictureBoxPixelated = new PictureBox();
             pixelSizeInput = new NumericUpDown();
             materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            btnSave = new MaterialSkin.Controls.MaterialButton();
             ((System.ComponentModel.ISupportInitialize)pictureBoxOriginal).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxPixelated).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pixelSizeInput).BeginInit();
@@ -124,7 +125,7 @@
             // 
             // pixelSizeInput
             // 
-            pixelSizeInput.Location = new Point(180, 92);
+            pixelSizeInput.Location = new Point(252, 92);
             pixelSizeInput.Name = "pixelSizeInput";
             pixelSizeInput.Size = new Size(120, 23);
             pixelSizeInput.TabIndex = 5;
@@ -135,7 +136,7 @@
             materialLabel1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             materialLabel1.AutoSize = true;
             materialLabel1.Depth = 0;
-            materialLabel1.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Pixel);
+            materialLabel1.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             materialLabel1.Location = new Point(6, 432);
             materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             materialLabel1.Name = "materialLabel1";
@@ -143,11 +144,32 @@
             materialLabel1.TabIndex = 6;
             materialLabel1.Text = "Spritai's Pixel Art 1.0";
             // 
+            // btnSave
+            // 
+            btnSave.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btnSave.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            btnSave.Depth = 0;
+            btnSave.HighEmphasis = true;
+            btnSave.Icon = null;
+            btnSave.Location = new Point(181, 83);
+            btnSave.Margin = new Padding(4, 6, 4, 6);
+            btnSave.MouseState = MaterialSkin.MouseState.HOVER;
+            btnSave.Name = "btnSave";
+            btnSave.NoAccentTextColor = Color.Empty;
+            btnSave.Size = new Size(64, 36);
+            btnSave.TabIndex = 7;
+            btnSave.Text = "Save";
+            btnSave.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            btnSave.UseAccentColor = false;
+            btnSave.UseVisualStyleBackColor = true;
+            btnSave.Click += btnSave_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(726, 454);
+            Controls.Add(btnSave);
             Controls.Add(materialLabel1);
             Controls.Add(pixelSizeInput);
             Controls.Add(pictureBoxPixelated);
@@ -174,5 +196,6 @@
         private PictureBox pictureBoxPixelated;
         private NumericUpDown pixelSizeInput;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private MaterialSkin.Controls.MaterialButton btnSave;
     }
 }
