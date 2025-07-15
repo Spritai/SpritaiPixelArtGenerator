@@ -19,7 +19,7 @@ Spritai Pixel Art est un outil simple et rapide qui convertit automatiquement n�
 
 
 
-<img width="600" height="600" alt="logospritaipixelart" src="https://github.com/user-attachments/assets/e9659ebb-66c3-483a-954b-00a43d4ebd27" />
+<img width="300" height="300" alt="logospritaipixelart" src="https://github.com/user-attachments/assets/e9659ebb-66c3-483a-954b-00a43d4ebd27" />
 
 
 <img width="729" height="453" alt="Capture d’écran 2025-07-15 155014" src="https://github.com/user-attachments/assets/fb676d18-964f-4f79-953c-21ef7352ca9a" />
