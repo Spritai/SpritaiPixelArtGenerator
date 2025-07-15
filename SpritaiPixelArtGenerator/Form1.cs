@@ -95,24 +95,47 @@ namespace SpritaiPixelArtGenerator
             return result;
         }
 
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (pictureBoxPixelated.Image == null)
+            {
+                MessageBox.Show("Aucune image pixelisée à enregistrer.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            using (SaveFileDialog sfd = new SaveFileDialog())
+            {
+                sfd.Filter = "PNG Image|*.png";
+                sfd.Title = "Enregistrer l’image pixelisée";
+
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        pictureBoxPixelated.Image.Save(sfd.FileName, System.Drawing.Imaging.ImageFormat.Png);
+                        MessageBox.Show("Image enregistrée avec succès !", "Succès", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Erreur lors de l'enregistrement : " + ex.Message, "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
         private void pixelSizeInput_ValueChanged(object sender, EventArgs e)
         {
-            // Ce code peut rester vide si tu ne fais rien à chaque changement.
+            
         }
 
         private void pictureBoxOriginal_Click(object sender, EventArgs e)
         {
-            // Optionnel : zoom, outil pipette, etc.
+            
         }
 
         private void pictureBoxPixelated_Click(object sender, EventArgs e)
         {
-            // Optionnel : enregistrement rapide par clic ?
-        }
-
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-
+            
         }
     }
 }
