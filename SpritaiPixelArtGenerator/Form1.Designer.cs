@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             ThemeButton = new MaterialSkin.Controls.MaterialButton();
             btnImport = new MaterialSkin.Controls.MaterialButton();
             btnPixelize = new MaterialSkin.Controls.MaterialButton();
@@ -177,6 +178,7 @@
             Controls.Add(btnPixelize);
             Controls.Add(btnImport);
             Controls.Add(ThemeButton);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
             Text = "Spritai's Pixel Art";
             Load += Form1_Load;
